@@ -1,0 +1,24 @@
+Write a function that creates a binary tree node
+
+Prototype: binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
+Where parent is a pointer to the parent node of the node to create
+And value is the value to put in the new node
+When created, a node does not have any child
+Your function must return a pointer to the new node, or NULL on failure
+
+Terminal:
+
+alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 binary_tree_print.c 8-main.c 8-binary_tree_postorder.c 0-binary_tree_node.c -o 8-post
+alex@/tmp/binary_trees$ ./8-post
+       .-------(098)-------.
+  .--(012)--.         .--(402)--.
+(006)     (056)     (256)     (512)
+6
+56
+12
+256
+512
+402
+98
+alex@/tmp/binary_trees$
+
