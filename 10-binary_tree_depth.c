@@ -7,7 +7,7 @@
  */
 size_t binary_tree_depth(const binary_tree_t *tree)
 {
-	/* To store final depth */
+	/* To store the final depth */
 	size_t depth;
 	/* A pointer top traverse up to the root */
 	const binary_tree_t *current;
