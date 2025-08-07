@@ -7,23 +7,23 @@
  */
 int get_height(const binary_tree_t *node)
 {
-	int left_height;
-	int right_height;
+	int l;
+	int r;
 
 	if (node == NULL)
 		return (0);
 	/* Measure the height of the left subtree */
-	left_height = get_height(node->left);
+	l = get_height(node->left);
 	/* Measure the height of the right subtree */
-	right_height = get_height(node->right);
+	r = get_height(node->right);
 	/* Determine which subtree is taller */
-	if (left_height > right_height)
+	if (l > r)
 	{
-		return (left_height + 1);
+		return (l + 1);
 	}
 	else
 	{
-		return (right_height + 1);
+		return (r + 1);
 	}
 }
 
@@ -42,17 +42,23 @@ int binary_tree_balance(const binary_tree_t *tree)
 	if (tree == NULL)
 		return (0);
 	/* Recursively calc the height of the left subtree */
-	left_height = 0;
-       	if (tree->left != NULL)
+	if (tree->left != NULL)
 	{
-	left_height = 1 + get_height(tree->left);
+		left_height = get_height(tree->left);
+	}
+	else
+	{
+		left_height = 0;
 	}
 	/* Recursively calc the height of the right subtree */
-        right_height = 0;
         if (tree->right != NULL)
         {
-        right_height = 1 + get_height(tree->right);       
-        }	
+		right_height = get_height(tree->right);       
+	}
+	else
+	{
+		right_height = 0;
+	}	
 	/* Calculate the balance factor */
 	balance = left_height - right_height;
 
