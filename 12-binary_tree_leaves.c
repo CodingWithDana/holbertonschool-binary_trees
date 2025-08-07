@@ -4,7 +4,7 @@
  * binary_tree_leaves - count the leaves in a binary tree
  * @tree: a pointer to the root node of the tree to count the leaves
  * Return: number of leaves, otherwise 0
- */                                                                                                                     
+ */
 size_t binary_tree_leaves(const binary_tree_t *tree)
 {
 	/* Number of leaves in the left subtree */
@@ -25,9 +25,9 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
 	/* Recursively count the leaves in the left subtree */
 	left_leaves = binary_tree_leaves(tree->left);
 	/* Recursively count the leaves in the right subtree */
-        right_leaves = binary_tree_leaves(tree->right);
+	right_leaves = binary_tree_leaves(tree->right);
 	/* Add the number of leaves from both sides */
 	total_leaves = left_leaves + right_leaves;
 
 	return (total_leaves);
-}                            
+}
