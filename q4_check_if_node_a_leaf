@@ -1,0 +1,16 @@
+Write a function that checks if a node is a leaf
+
+Prototype: int binary_tree_is_leaf(const binary_tree_t *node);
+Where node is a pointer to the node to check
+Your function must return 1 if node is a leaf, otherwise 0
+If node is NULL, return 0
+
+Terminal:
+alex@/tmp/binary_trees$ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 binary_tree_print.c 4-binary_tree_is_leaf.c 4-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 4-leaf
+alex@/tmp/binary_trees$ ./4-leaf 
+  .-------(098)--.
+(012)--.       (128)--.
+     (054)          (402)
+Is 98 a leaf: 0
+Is 128 a leaf: 0
+Is 402 a leaf: 1
